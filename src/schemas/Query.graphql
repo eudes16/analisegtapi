@@ -1,0 +1,127 @@
+type Query {
+    ### Auth Query ###
+    # This query will return a string with JWT token
+    claim(code: String): Response
+
+    ### User Query ###
+    # This query will return a list of users
+    getUsers(fields: [UserFieldsEnum!], filter: inputUserFilter includes: [UserIncludeFieldsEnum!]): Response
+
+    ### Games Query ###
+    # This query will return a list of games
+    getGames(fields: [GameFieldsEnum!], filter: inputGameFilter, pagination: inputPagination, orderBy: [inputOrderByGame!]): Response
+    
+    ### Achievements Query ###
+    # This query will return a list of achievements
+    getAchievements: Response
+}
+
+input UserFields {
+    fields: [UserFieldsEnum]
+}
+
+input inputPagination {
+    page: Int
+    limit: Int
+}
+
+input OperationsString {
+    _eq: String
+    _not: String
+    _in: [String!]
+    _not_in: [String!]
+    _lt: String
+    _lte: String
+    _gt: String
+    _gte: String
+    _contains: String
+    _not_contains: String
+    _starts_with: String
+    _not_starts_with: String
+    _ends_with: String
+    _not_ends_with: String
+}
+
+input OperationsInt {
+    _eq: Int
+    _not: Int
+    _in: [Int!]
+    _not_in: [Int!]
+    _lt: Int
+    _lte: Int
+    _gt: Int
+    _gte: Int
+    _contains: Int
+    _not_contains: Int
+    _starts_with: Int
+    _not_starts_with: Int
+    _ends_with: Int
+    _not_ends_with: Int
+}
+
+input OperationsDate {
+    _eq: String
+    _not: String
+    _in: [String!]
+    _not_in: [String!]
+    _lt: String
+    _lte: String
+    _gt: String
+    _gte: String
+}
+
+input OperationsBoolaen {
+    _is: Boolean
+    _not_is: Boolean
+}
+
+input OperationsFloat {
+    _eq: Float
+    _not: Float
+    _in: [Float!]
+    _not_in: [Float!]
+    _lt: Float
+    _lte: Float
+    _gt: Float
+    _gte: Float
+}
+
+input OperationsEnum {
+    _eq: String
+    _not: String
+    _in: [String!]
+    _not_in: [String!]
+}
+
+input OperationsArrayString {
+    _has: String
+    _has_every: [String!]
+    _has_some: [String!]
+    _is_empty: Boolean
+    _is_set: Boolean
+    _eq: [String!]
+}
+
+input OperationsArrayInt {
+    _has: Int
+    _has_every: [Int!]
+    _has_some: [Int!]
+    _is_empty: Boolean
+    _is_set: Boolean
+    _eq: [Int!]
+}
+
+input OperationsArrayFloat {
+    _has: Float
+    _has_every: [Float!]
+    _has_some: [Float!]
+    _is_empty: Boolean
+    _is_set: Boolean
+    _eq: [Float!]
+}
+
+enum OrderDirectionEnum {
+    ASC
+    DESC
+}
+

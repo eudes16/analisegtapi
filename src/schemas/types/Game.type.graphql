@@ -1,0 +1,44 @@
+type Game {
+    id: String
+    titleId: String
+    name: String
+    devices: [GameDevices]
+    displayImage: String
+    createdAt: String
+    updatedAt: String
+}
+
+enum GameDevices {
+    Android
+    Mobile
+    PC
+    Win32
+    Xbox360
+    XboxOne
+    XboxSeries
+}
+
+enum GameFieldsEnum {
+    id
+    titleId
+    name
+    devices
+    displayImage
+    createdAt
+    updatedAt
+}
+
+input inputGameFilter {
+    id: OperationsInt
+    titleId: OperationsInt
+    name: OperationsString
+    devices: OperationsArrayString
+    displayImage: OperationsString
+    createdAt: OperationsDate
+    updatedAt: OperationsDate
+}
+
+input inputOrderByGame {
+    field: GameFieldsEnum
+    direction: OrderDirectionEnum
+}

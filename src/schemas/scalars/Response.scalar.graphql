@@ -1,0 +1,15 @@
+scalar Data
+
+type Page {
+    totalRecords: Int
+    totalPages: Int
+    previousPage: Int
+    currentPage: Int
+    nextPage: Int
+}
+
+type Response {
+    data: Data
+    page: Page
+    message: [String]
+}

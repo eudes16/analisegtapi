@@ -1,0 +1,11 @@
+type Mutation {
+    ### Achievements Mutation ###
+    saveAchievements(achievements: [AchievementInput]): Response
+
+    ### User Mutation ###
+    updateGamerTag(gamerTag: String): Response
+
+    ### Games Mutation ###
+
+
+}

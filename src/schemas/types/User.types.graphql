@@ -1,0 +1,46 @@
+type User {
+    id: Int
+    email: String
+    name: String
+    xboxId: String
+    gamerTag: String
+    gamerScore: String
+    imageUrl: String
+    createdAt: String
+    updatedAt: String
+    achievements: [Achievement]
+}
+
+enum UserFieldsEnum {
+    id
+    email
+    name
+    xboxId
+    gamerTag
+    gamerScore
+    imageUrl
+    createdAt
+    updatedAt
+}
+
+enum UserIncludeFieldsEnum {
+    achievements
+    achievements_game
+}
+
+input inputUserFilter {
+    id: OperationsInt
+    email: OperationsString
+    name: OperationsString
+    xboxId: OperationsString
+    gamerTag: OperationsString
+    gamerScore: OperationsString
+    imageUrl: OperationsString
+    createdAt: OperationsString
+    updatedAt: OperationsString
+}
+
+input inputOrderByUser {
+    field: UserFieldsEnum
+    direction: OrderDirectionEnum
+}

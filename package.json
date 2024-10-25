@@ -1,0 +1,32 @@
+{
+  "name": "analisegt-api",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Eudes Vicente de Souza Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "nodemon": "^3.1.4",
+    "prisma": "^5.18.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "dev": "nodemon --watch 'src/**/*.ts' src/index.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "@graphql-tools/load-files": "^7.0.0",
+    "@prisma/client": "^5.18.0",
+    "apollo-server": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "neo4j-driver": "^5.23.0"
+  }
+}

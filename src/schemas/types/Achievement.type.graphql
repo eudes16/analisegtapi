@@ -1,0 +1,43 @@
+type Achievement {
+    id: Int
+    gameId: Int
+    game: Game
+    userId: Int
+    user: User
+    currentAchievements: Int
+    totalAchievements: Int
+    currentGamerscore: Int
+    totalGamerscore: Int
+    progressPercentage: Int
+    latTimePlayed: String
+    createdAt: String
+    updatedAt: String
+}
+
+enum AchievementFieldsEnum {
+    id
+    gameId
+    game
+    userId
+    user
+    currentAchievements
+    totalAchievements
+    currentGamerscore
+    totalGamerscore
+    progressPercentage
+    latTimePlayed
+    createdAt
+    updatedAt
+}
+
+input AchievementInput {
+    id: Int
+    gameId: Int
+    userId: Int
+    currentAchievements: Int
+    totalAchievements: Int
+    currentGamerscore: Int
+    totalGamerscore: Int
+    progressPercentage: Int
+    latTimePlayed: String
+}
